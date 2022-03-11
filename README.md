@@ -1,5 +1,5 @@
 # Sorteio Samuel
->### -Aplicação feita para sortear nomes de uma rifa que eu fiz para ajudar no cha de bebe do meu primeiro filho
+>### -Aplicação feita para sortear nomes de uma rifa que eu fiz para ajudar no chá de bebê do meu primeiro filho
 >## Objetivo:
 >### Essa aplicação tem como objetivo principal sortear numeros aleatórios dos participantes adicionados em lista
 > - Primeiramente adicionamos a quantidade de pessoas que participará e quantos numeros serão sorteados, no caso (1) numero por sorteio.
