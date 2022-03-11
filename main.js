@@ -1,70 +1,60 @@
 /*Variaveis de identificação das inputs*/
-const nome = document.querySelector('#nomeRifa');
+let nome = document.querySelector('#nomeRifa');
 const numero = document.querySelector('#numRifa');
-const enviar = document.querySelector('#enviar');
+let enviar = document.querySelector('.btnSorte');
 const resultado= document.querySelector('#listaSorteio');
 
-/*Função para criar lista*/
-enviar.addEventListener('click', () => {
-    if(enviar === onclick){
-        let lista = {
-            nome: nome.value,
-            id: gerarId(),
-        }
-
-        let numeroLista = {
-            nome: numero.value,
-            id:gerarId(),
-        }
-        adicionarLista(lista);
-        adicionarNumeroLista(numeroLista)
-    }
-});
-
-/*Função para criar lista*/
-enviar.addEventListener('click',(e) => {
+/*Função que executa o evento de click*/
+function eventoDeclick(){
     let lista = {
         nome: nome.value,
         id: gerarId(),
     }
-
-    let numeroLista = {
-        nome: numero.value,
-        id:gerarId(),
-    }
     adicionarLista(lista);
-    adicionarNumeroLista(numeroLista)
-})
+    nome.value = "";
+}
+
+/*Evento para criar a lista com um click*/
+enviar.addEventListener('click',() => {
+   eventoDeclick();
+});
 
 /*Criar um Id automático*/
 function gerarId(){
     return Math.floor(Math.random() * 2000);
 }
 
-/*Criação da tag p, adcionando ela na div */
+/*Criação da tag li */
 function adicionarLista(nomesSorteio){
-    let div = criarTagP(nomesSorteio);
-    resultado.appendChild(div);
+    let li = criarTagLi(nomesSorteio);
+    resultado.appendChild(li);
 }
 
-/*Criando criando elemento e adicionando ele ao html */
-function criarTagP(nomesSorteio){
-   let p = document.createElement('p');
-   p.classList.add('nomeSorteioRifa');
-   p.innerHTML = nomesSorteio.nome;
-   return p;
+/*Criando elemento e adicionando ele ao html */
+function criarTagLi(nomesSorteio){
+   let li = document.createElement('li');
+   li.classList.add('listaSorteio');
+   li.innerHTML = nomesSorteio.nome;
+
+   return li;
 }
 
-/*Criando numero para input numero */
-function adicionarNumeroLista(numeroSorteio){
-    let p = criarTagP(numeroSorteio);
-    resultado.appendChild(p);
+/*Criando a Logica para o sorteio*/
+let btnSorte = document.getElementById('sortear')
+
+function sorteio(){
+    const min = document.getElementById('min').value;
+    const max = document.getElementById('max').value;
+    
+    let sort = Math.floor(Math.random()*Math.floor  (max));
+
+    while(sort < min){
+        sort = Math.floor(Math.random()*Math.floor  (max));
+    }
+
+    document.querySelector('.sortudo').innerHTML = sort;
 }
 
-/*Criando criando elemento e adicionando ele ao html */
-function criarTagPNumero(numeroSorteio){
-    let p = document.createElement('p');
-    p.classList.add('numRifa');
-    p.innerHTML = numeroSorteio.numero;
-    return p;
-}
+btnSorte.addEventListener('click', () => {
+    sorteio()   
+   });

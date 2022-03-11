@@ -9,14 +9,43 @@
     <title>Sorteio Samuca</title>
 </head>
 <body>
-    <input id="nomeRifa" class="nomeSorteioRifa" type="text">
-    <input id="numRifa" type="number">
-    <input id="enviar" type="button" value="enviar">
+    <div class="container">
+        <h1>Chá Rifa do Samuel</h1>
 
-    <div id="listaSorteio" class="lista">
-    
+        <div class="number">
+            <label for="">Numero Máximo Para Sorteio</label> 
+            <div>
+                <input id="max" type="number">
+            </div>
+            <label for="">Quantia de Numeros Sorteados</label>
+            <div>
+                <input id="min" type="number">
+            </div>
+        </div>
+
     </div>
 
+    <div class="container">
+        <input id="nomeRifa" class="nomeSorteioRifa" type="text">
+       
+        <input id="enviar" class="btnSorte" type="button" value="Enviar">
+    </div>
+   
+    <div class="lista">
+        <ol id="listaSorteio" type>
+
+        </ol>
+    </div>
+
+    <div id="btn" class="btn">
+        <input id="sortear" class="btn" type="button" value="Sortear">
+    </div>
+
+    <div id="sortudo">
+        <h1 class="sortudo"></h1>
+    </div>
+    
+    
     <script src="main.js"></script>
 </body>
 </html>

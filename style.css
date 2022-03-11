@@ -1,10 +1,79 @@
-p{
-    display: inline;
-    margin: 1px;
-    color: red;
+
+.container{
+    text-align: center;
+    margin-top: 5rem;
 }
 
-.listaSorteio{
+.number{
+    flex-direction: column;
+}
+
+.sortudo{    
+    background: yellow;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    border: 3px solid red;
+    border-radius: 50px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-image: url(https://http2.mlstatic.com/papel-de-parede-infantil-menino-beb-estrelas-azul-claro-D_NQ_NP_769966-MLB26701257228_012018-F.jpg);
+    background-repeat:  no-repeat;
+    background-position: center;
+    background-color: rgb(233, 242, 250);
+}
+
+input{
+    border: none;
+    background-color: #ffff;
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    box-shadow: 5px 1px 5px rgb(232, 233, 233);
+    margin: 1rem;
+    outline: 0;
+    text-align: center;
+}
+
+ol{
     display: flex;
     flex-direction: column;
+}
+
+li{   
+    font-size: 1.2rem;
+    margin-left: 43%;
+}
+
+#enviar{
+    background-color: rgb(109, 163, 243);
+    color: aliceblue;
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    border-color: rgb(109, 163, 243);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#sortear{
+    background-color: rgb(109, 163, 243);
+    color: aliceblue;
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem;
+    border-color: rgb(109, 163, 243);
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+#btn{
+    text-align: center;
+}
+
+#sortudo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
 }
